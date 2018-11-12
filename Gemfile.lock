@@ -1,0 +1,39 @@
+PATH
+  remote: .
+  specs:
+    rcto (0.0.1)
+      activerecord (~> 5.2, >= 5.2.1)
+
+GEM
+  specs:
+    activemodel (5.2.1)
+      activesupport (= 5.2.1)
+    activerecord (5.2.1)
+      activemodel (= 5.2.1)
+      activesupport (= 5.2.1)
+      arel (>= 9.0)
+    activesupport (5.2.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (9.0.0)
+    concurrent-ruby (1.0.5)
+    i18n (1.1.1)
+      concurrent-ruby (~> 1.0)
+    minitest (5.11.3)
+    rake (12.3.1)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest (~> 5.8, >= 5.8.4)
+  rake
+  rcto!
+
+BUNDLED WITH
+   1.16.4
