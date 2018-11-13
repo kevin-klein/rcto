@@ -31,10 +31,14 @@ class TestMeme < Minitest::Test
   # end
 
   def test_has_username_field
-    assert_includes User.fields.map(&:name), :username
+    assert_includes User.fields.map(&:name), 'username'
   end
 
   def test_has_no_table_field
-    refute User.fields.map(&:name).include?(:table_number)
+    refute User.fields.map(&:name).include?('table_number')
+  end
+
+  def test_cart_table_field
+    assert_includes Cart.fields.map(&:name), 'table_number'
   end
 end
