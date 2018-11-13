@@ -1,4 +1,5 @@
 require 'rcto/schema/field'
+require 'rcto/schema/has_many'
 
 module Rcto
   module Schema
@@ -13,6 +14,10 @@ module Rcto
 
       def field(name, type, opts={})
         @fields << Field.new(name.to_s, type, opts)
+      end
+
+      def has_many(name, opts={})
+        @fields << HasMany.new(name.to_s, opts)
       end
     end
 

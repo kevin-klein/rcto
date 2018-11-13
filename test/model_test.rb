@@ -7,6 +7,8 @@ class User < Rcto::Model
     field :password, :string
     field :created_at, :date
     field :updated_at, :date
+
+    has_many :carts, dependent: :destroy
   end
 end
 
@@ -40,5 +42,10 @@ class TestMeme < Minitest::Test
 
   def test_cart_table_field
     assert_includes Cart.fields.map(&:name), 'table_number'
+  end
+
+  def test_has_many
+    field = User.fields.select { |f| f.name == 'carts' }.first
+    assert_equal field.type, Cart
   end
 end
